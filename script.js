@@ -180,9 +180,28 @@ function getHeroImage(heroName) {
 function initMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
     
+    // Toggle mobile menu visibility
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking on a link
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileMenuButton.contains(event.target);
+        
+        if (!isClickInsideMenu && !isClickOnButton && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
     });
 }
 
@@ -228,6 +247,106 @@ function initAnimations() {
     });
 }
 
+// Initialize table scroll indicators
+function initTableScrollIndicators() {
+    // Gunakan selector yang benar dengan escape karakter yang tepat
+    const tableContainers = document.querySelectorAll('#standings .bg-\\[\\#3A3A3A\\]\\/50, #stats .bg-\\[\\#3A3A3A\\]\\/50');
+    
+    tableContainers.forEach(container => {
+        // Check if scroll is needed
+        const checkScrollable = () => {
+            if (container.scrollWidth > container.clientWidth) {
+                container.classList.add('scrollable');
+                // Tambahkan class untuk menunjukkan bahwa tabel dapat di-scroll
+                container.classList.add('table-scrollable');
+            } else {
+                container.classList.remove('scrollable');
+                container.classList.remove('table-scrollable');
+            }
+        };
+        
+        // Initial check
+        checkScrollable();
+        
+        // Check on resize
+        window.addEventListener('resize', checkScrollable);
+        
+        // Hide indicator when scrolled to the end
+        container.addEventListener('scroll', function() {
+            const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+            if (isAtEnd) {
+                container.classList.add('scrolled-end');
+            } else {
+                container.classList.remove('scrolled-end');
+            }
+        });
+        
+        // Tambahkan animasi pulse pada indikator scroll untuk menarik perhatian
+        setTimeout(() => {
+            if (container.classList.contains('scrollable')) {
+                const indicator = container.querySelector('::after');
+                if (indicator) {
+                    indicator.style.animation = 'pulse 2s infinite';
+                }
+            }
+        }, 1000);
+        
+        // Implementasi drag-to-scroll untuk pengalaman mobile yang lebih baik
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener('mousedown', (e) => {
+            if (container.classList.contains('scrollable')) {
+                isDown = true;
+                container.classList.add('active');
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            }
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDown = false;
+            container.classList.remove('active');
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDown = false;
+            container.classList.remove('active');
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2; // Kecepatan scroll
+            container.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events for mobile
+        container.addEventListener('touchstart', (e) => {
+            if (container.classList.contains('scrollable')) {
+                isDown = true;
+                container.classList.add('active');
+                startX = e.touches[0].pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+            }
+        });
+
+        container.addEventListener('touchend', () => {
+            isDown = false;
+            container.classList.remove('active');
+        });
+
+        container.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - container.offsetLeft;
+            const walk = (x - startX) * 2;
+            container.scrollLeft = scrollLeft - walk;
+        });
+    });
+}
+
 // Page Load
 document.addEventListener('DOMContentLoaded', function() {
     loadStandingsData();
@@ -236,8 +355,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initSmoothScrolling();
     initAnimations();
+    initTableScrollIndicators();
     
-    // Add style for fade-in animation
+    // Add style for fade-in animation and table scroll indicators
     const style = document.createElement('style');
     style.innerHTML = `
         @keyframes fadeIn {
@@ -246,6 +366,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         .animate-fadeIn {
             animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        
+        /* Tambahkan gaya untuk tabel yang dapat di-scroll */
+        .table-scrollable {
+            position: relative;
+            cursor: grab;
+        }
+        
+        .table-scrollable:active {
+            cursor: grabbing;
+        }
+        
+        /* Hide scroll indicator when not needed or at end */
+        #standings .bg-\\[\\#3A3A3A\\]\\/50:not(.scrollable)::after,
+        #stats .bg-\\[\\#3A3A3A\\]\\/50:not(.scrollable)::after,
+        #standings .bg-\\[\\#3A3A3A\\]\\/50.scrolled-end::after,
+        #stats .bg-\\[\\#3A3A3A\\]\\/50.scrolled-end::after {
+            display: none;
+        }
+        
+        /* Tambahkan gaya untuk indikator scroll yang lebih mencolok pada mobile */
+        @media (max-width: 480px) {
+            #standings .bg-\\[\\#3A3A3A\\]\\/50::after,
+            #stats .bg-\\[\\#3A3A3A\\]\\/50::after {
+                font-size: 0.9rem;
+                padding: 10px;
+                background-color: rgba(44, 44, 44, 0.9);
+                border-top: 1px solid var(--gold);
+                animation: pulse 2s infinite;
+            }
         }
     `;
     document.head.appendChild(style);
