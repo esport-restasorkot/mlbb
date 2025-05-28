@@ -1,39 +1,39 @@
 // JSON Data
 const standingsData = [
-    { rank: 1, team: "Sorong Dragons", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
-    { rank: 2, team: "Abyss Gladiators", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
-    { rank: 3, team: "Celestial Legion", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
-    { rank: 4, team: "Titan Wrath", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 }
+    { rank: 1, team: "BAJIR SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
+    { rank: 2, team: "AANSLAG SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
+    { rank: 3, team: ".... SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
+    { rank: 4, team: "VALOR HEXA SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 }
 ];
 
 const topPlayersData = [
-    { player: "Revolta", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Arlott", heroImg: "https://i.ibb.co/9W1JX9P/arlott.png", role: "Exp" },
-    { player: "Hades", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Ling", heroImg: "https://i.ibb.co/6YF3cKp/ling.png", role: "Jungle" },
-    { player: "Zeus", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Valentina", heroImg: "https://i.ibb.co/85PBgZ4/valentina.png", role: "Mid" },
-    { player: "Kronos", team: "Titan Wrath", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Atlas", heroImg: "https://i.ibb.co/MZc7JnY/atlas.png", role: "Roam" }
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO", heroImg: "https://i.ibb.co/9W1JX9P/arlott.png", role: "Exp" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO", heroImg: "https://i.ibb.co/6YF3cKp/ling.png", role: "Jungle" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO", heroImg: "https://i.ibb.co/85PBgZ4/valentina.png", role: "Mid" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO", heroImg: "https://i.ibb.co/MZc7JnY/atlas.png", role: "Roam" }
 ];
 
 const playerStatsData = [
-    { player: "Revolta", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Arlott" },
-    { player: "Hades", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Ling" },
-    { player: "Mythos", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Lancelot" },
-    { player: "Zeus", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Valentina" },
-    { player: "Athena", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Kagura" },
-    { player: "BlitzX", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Balmond" },
-    { player: "Vortex", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Grock" },
-    { player: "Kronos", team: "Titan Wrath", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Atlas" },
-    { player: "Nyx", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Diggie" },
-    { player: "Ragnar", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Bruno" },
-    { player: "Revolta", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Arlott" },
-    { player: "Hades", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Ling" },
-    { player: "Mythos", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Lancelot" },
-    { player: "Zeus", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Valentina" },
-    { player: "Athena", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Kagura" },
-    { player: "BlitzX", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Balmond" },
-    { player: "Vortex", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Grock" },
-    { player: "Kronos", team: "Titan Wrath", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Atlas" },
-    { player: "Nyx", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Diggie" },
-    { player: "Ragnar", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Bruno" }
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" }
 ];
 
 // Load Standings Data
@@ -67,10 +67,10 @@ function loadStandingsData() {
 
 function getTeamImage(teamName) {
     const images = {
-        "Sorong Dragons": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
-        "Abyss Gladiators": "https://i.ibb.co/qBRyH5H/gladiator-logo.png",
-        "Celestial Legion": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
-        "Titan Wrath": "https://i.ibb.co/fH2x2pK/titan-logo.png"
+        "BAJIR SQUAD": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
+        "AANSLAG SQUAD": "https://i.ibb.co/qBRyH5H/gladiator-logo.png",
+        ".... SQUAD": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
+        "VALOR HEXA SQUAD": "https://i.ibb.co/fH2x2pK/titan-logo.png"
     };
     return images[teamName];
 }
@@ -162,16 +162,16 @@ function loadPlayerStats() {
 
 function getHeroImage(heroName) {
     const heroImages = {
-        "Arlott": "https://i.ibb.co/9W1JX9P/arlott.png",
-        "Ling": "https://i.ibb.co/6YF3cKp/ling.png",
-        "Valentina": "https://i.ibb.co/85PBgZ4/valentina.png",
-        "Lancelot": "https://i.ibb.co/m9QHqYY/lancelot.png",
-        "Kagura": "https://i.ibb.co/PZ7hNQK/kagura.png",
-        "Balmond": "https://i.ibb.co/Np4R2YR/balmond.png",
-        "Grock": "https://i.ibb.co/F0XjW8n/grock.png",
-        "Atlas": "https://i.ibb.co/MZc7JnY/atlas.png",
-        "Diggie": "https://i.ibb.co/CtMhY5b/diggie.png",
-        "Bruno": "https://i.ibb.co/Zfm8NQc/bruno.png"
+        "HERO": "https://i.ibb.co/9W1JX9P/arlott.png",
+        "HERO": "https://i.ibb.co/6YF3cKp/ling.png",
+        "HERO": "https://i.ibb.co/85PBgZ4/valentina.png",
+        "HERO": "https://i.ibb.co/m9QHqYY/lancelot.png",
+        "HERO": "https://i.ibb.co/PZ7hNQK/kagura.png",
+        "HERO": "https://i.ibb.co/Np4R2YR/balmond.png",
+        "HERO": "https://i.ibb.co/F0XjW8n/grock.png",
+        "HERO": "https://i.ibb.co/MZc7JnY/atlas.png",
+        "HERO": "https://i.ibb.co/CtMhY5b/diggie.png",
+        "HERO": "https://i.ibb.co/Zfm8NQc/bruno.png"
     };
     return heroImages[heroName];
 }
