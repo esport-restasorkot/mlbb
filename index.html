@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#6A0DAD">
     <title>Esport Polresta Sorong Kota</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,31 +66,52 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 relative">
             <div class="text-center">
-                <img src="logo1.png" alt="Hari Bhayangkara Ke-79" class="mx-auto h-24 md:h-32 mb-6">
+                <img src="logo1.png" alt="Hari Bhayangkara Ke-79" class="mx-auto h-16 sm:h-20 md:h-32 mb-4 md:mb-6">
                 
-                <h1 class="text-4xl md:text-6xl font-bold text-[#FFD700] mb-4 title-font glow">
-                    KAPOLRESTA <br>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-[#FFD700] mb-2 md:mb-4 title-font glow px-2">
+                    KAPOLRESTA <br class="md:block">
                     <span class="text-white">SORONG KOTA CUP</span>
                 </h1>
                 
-                <h2 class="text-xl md:text-2xl text-[#F8F8F8] mb-8 subtitle-font">Turnamen Mobile Legends Internal dalam <br> Rangka Hari Bhayangkara ke-79 Tahun 2025</h2>
+                <h2 class="text-base sm:text-xl md:text-2xl text-[#F8F8F8] mb-4 md:mb-8 subtitle-font px-4">Turnamen Mobile Legends Internal dalam <br class="hidden md:block"> Rangka Hari Bhayangkara ke-79 Tahun 2025</h2>
                 
-                <div class="digital-font bg-[#2C2C2C]/80 border border-[#FFD700]/30 rounded-lg inline-block px-6 py-2 mb-8">
-                    <div class="text-2xl md:text-3xl text-[#FFD700]">HADIAH RP. 1.000.000</div>
-                    <div class="text-sm text-[#F8F8F8]">TOTAL PRIZE POOL</div>
+                <div class="digital-font bg-[#2C2C2C]/80 border border-[#FFD700]/30 rounded-lg inline-block px-3 sm:px-6 py-2 mb-4 sm:mb-8 max-w-[90%] sm:max-w-none sm:w-auto mx-auto sm:mx-0">
+                    <div class="text-lg sm:text-2xl md:text-3xl text-[#FFD700] text-center">RP. 1.000.000</div>
+                    <div class="text-xs sm:text-sm text-[#F8F8F8] text-center">TOTAL PRIZE POOL</div>
                 </div>
                 
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
-                    <button class="btn-gold px-8 py-3 rounded-lg font-bold ripple-effect">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12 w-full px-4 sm:px-0 sm:w-auto">
+                    <button class="btn-gold px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold ripple-effect text-sm sm:text-base w-full sm:w-auto">
                         <i class="fas fa-calendar-alt mr-2"></i> 29 Mei - 28 Juni 2025
                     </button>
-                    <button class="border-2 border-[#FFD700] text-[#FFD700] px-8 py-3 rounded-lg font-bold ripple-effect">
+                    <button class="border-2 border-[#FFD700] text-[#FFD700] px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-bold ripple-effect text-sm sm:text-base w-full sm:w-auto">
                         <i class="fas fa-trophy mr-2"></i> OFFLINE TOURNAMENT
                     </button>
                 </div>
                 
-                <div class="relative w-full max-w-2xl mx-auto mt-12 float-animation">
-                    <img src="esport.png" alt="E-Sport Polresta Sorong Kota" class="w-64 mx-auto">
+                <!-- Champions Card -->
+                <div class="relative w-full max-w-2xl mx-auto mt-6 sm:mt-8 md:mt-12 float-animation">
+                    <div class="card-glass rounded-xl overflow-hidden border-2 border-[#FFD700] shadow-lg">
+                        <div class="bg-[#FFD700] p-4 text-center">
+                            <h3 class="text-xl sm:text-2xl font-bold text-[#2C2C2C] title-font">CHAMPIONS</h3>
+                            <p class="text-[#6A0DAD] text-sm subtitle-font">SEASON 2025</p>
+                        </div>
+                        <div class="p-4 flex flex-col items-center">
+                            <div class="relative mb-4">
+                                <img src="foto.jpg" alt="Foto Bersama Tim E-Sport Polresta Sorong Kota" class="w-full sm:w-64 md:w-72 mx-auto rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+                                <!-- <div class="absolute -top-2 -right-2 bg-[#6A0DAD] text-[#FFD700] rounded-full w-12 h-12 flex items-center justify-center title-font text-xl font-bold">1</div> -->
+                            </div>
+                            <h4 class="text-[#FFD700] text-lg sm:text-xl font-bold title-font mb-1">SQUAD ????</h4>
+                            <p class="text-[#F8F8F8] text-sm subtitle-font mb-3">JUARA BERTAHAN</p>
+                            <div class="flex gap-2 mb-2">
+                                <span class="bg-[#6A0DAD]/70 text-[#F8F8F8] px-3 py-1 rounded-full text-xs font-medium">0 KEMENANGAN</span>
+                                <span class="bg-[#6A0DAD]/70 text-[#F8F8F8] px-3 py-1 rounded-full text-xs font-medium">0 KEKALAHAN</span>
+                            </div>
+                            <button class="btn-gold px-4 py-2 rounded-lg font-bold ripple-effect text-sm mt-2">
+                                <i class="fas fa-trophy mr-2"></i>KAPOLRESTA SORONG KOTA CUP
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
