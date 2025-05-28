@@ -80,7 +80,17 @@ body {
     width: 200px;
 }
 
+/* Tablet Responsive Styles */
 @media (max-width: 768px) {
+    /* General Responsive Adjustments */
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
     .tournament-bracket {
         flex-direction: column;
     }
@@ -95,58 +105,213 @@ body {
         margin: 5px 0;
     }
 
-    /* Player Stats Responsive Styles */
-    .grid-cols-12 {
+    /* Table scroll adjustments for standings and player stats */
+    #standings .bg-\[#3A3A3A\]\/50,
+    #stats .bg-\[#3A3A3A\]\/50 {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        cursor: grab; /* Menunjukkan bahwa tabel dapat di-drag */
+    }
+    
+    /* Styling untuk status aktif saat tabel sedang di-drag */
+    #standings .bg-\[#3A3A3A\]\/50.active,
+    #stats .bg-\[#3A3A3A\]\/50.active {
+        cursor: grabbing;
+        user-select: none;
+    }
+    
+    #standings .grid-cols-12,
+    #stats .grid-cols-12 {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(12, minmax(70px, 1fr));
+        min-width: 650px;
     }
-
-    .grid-cols-12 .col-span-3:first-child {
-        grid-column: span 4;
+    
+    /* Add scroll indicator for tablets */
+    #standings .bg-\[#3A3A3A\]\/50::after,
+    #stats .bg-\[#3A3A3A\]\/50::after {
+        content: "⟺ Geser untuk melihat lebih banyak";
+        display: block;
+        text-align: center;
+        padding: 6px;
+        font-size: 0.85rem;
+        color: var(--gold);
+        background-color: rgba(44, 44, 44, 0.8);
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        animation: pulse 2s infinite; /* Animasi pulse untuk menarik perhatian */
     }
-
-    .grid-cols-12 .col-span-2 {
-        grid-column: span 4;
+    
+    /* Scroll indicator */
+    #standings .bg-\[#3A3A3A\]\/50.scrollable::after,
+    #stats .bg-\[#3A3A3A\]\/50.scrollable::after {
+        opacity: 1;
+        animation: pulse 2s infinite;
     }
-
-    .grid-cols-12 .col-span-1 {
-        grid-column: span 2;
+    
+    /* Hide scroll indicator when scrolled to the end */
+    #standings .bg-\[#3A3A3A\]\/50.scrolled-end::after,
+    #stats .bg-\[#3A3A3A\]\/50.scrolled-end::after {
+        opacity: 0;
+        animation: none;
     }
-
-    .grid-cols-12 .col-span-3:last-child {
-        grid-column: span 4;
+    
+    /* Animasi pulse untuk indikator scroll */
+    @keyframes pulse {
+        0% { opacity: 0.7; }
+        50% { opacity: 1; }
+        100% { opacity: 0.7; }
     }
-
-    .grid-cols-12 > div {
-        padding: 8px 4px;
-        font-size: 0.875rem;
+    
+    /* Tambahkan hint visual untuk scroll horizontal */
+    #standings .bg-\[#3A3A3A\]\/50.table-scrollable,
+    #stats .bg-\[#3A3A3A\]\/50.table-scrollable {
+        position: relative;
+    }
+    
+    /* Media query untuk perangkat mobile */
+    @media (max-width: 768px) {
+        /* Memperkuat indikator scroll pada mobile */
+        #standings .bg-\[#3A3A3A\]\/50.scrollable::after,
+        #stats .bg-\[#3A3A3A\]\/50.scrollable::after {
+            width: 30px; /* Lebih lebar pada mobile */
+            background: linear-gradient(to right, transparent, rgba(58, 58, 58, 0.9));
+        }
+        
+        /* Tambahkan hint visual untuk scroll horizontal pada mobile */
+        #standings .bg-\[#3A3A3A\]\/50.table-scrollable::before,
+        #stats .bg-\[#3A3A3A\]\/50.table-scrollable::before {
+            content: "⟺"; /* Simbol panah dua arah */
+            position: absolute;
+            top: -20px;
+            right: 10px;
+            color: #FFD700; /* Warna emas */
+            font-size: 16px;
+            z-index: 10;
+            animation: slideHint 2s infinite;
+        }
+        
+        @keyframes slideHint {
+            0% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            100% { transform: translateX(-5px); }
+        }
+    }
+    
+    /* Hero Section Adjustments */
+    .hero-gradient {
+        padding-top: 60px;
+    }
+    
+    /* Spacing Adjustments */
+    section {
+        padding: 40px 0;
+    }
+    
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
+/* Mobile Responsive Styles */
 @media (max-width: 480px) {
-    .grid-cols-12 {
-        grid-template-columns: repeat(2, 1fr);
+    /* Typography Adjustments */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
     }
-
-    .grid-cols-12 .col-span-3:first-child,
-    .grid-cols-12 .col-span-2,
-    .grid-cols-12 .col-span-1,
-    .grid-cols-12 .col-span-3:last-child {
-        grid-column: span 2;
-        text-align: left;
-        padding: 4px;
+    
+    h2 {
+        font-size: 1.25rem !important;
+        line-height: 1.4;
     }
-
-    .grid-cols-12 > div {
-        border-bottom: 1px solid rgba(106, 13, 173, 0.2);
+    
+    /* Table Scroll Adjustments for Standings and Player Stats */
+    #standings .bg-\[#3A3A3A\]\/50,
+    #stats .bg-\[#3A3A3A\]\/50 {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
     }
-
-    .grid-cols-12 > div:before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: inline-block;
-        width: 100px;
+    
+    #standings .grid-cols-12,
+    #stats .grid-cols-12 {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(80px, 1fr));
+        min-width: 700px;
+        width: max-content;
+    }
+    
+    #standings .col-span-1 { grid-column: span 1; }
+    #standings .col-span-2 { grid-column: span 2; }
+    #standings .col-span-3 { grid-column: span 3; }
+    #standings .col-span-5 { grid-column: span 5; }
+    
+    #stats .col-span-1 { grid-column: span 1; }
+    #stats .col-span-2 { grid-column: span 2; }
+    #stats .col-span-3 { grid-column: span 3; }
+    
+    /* Add scroll indicator */
+    #standings .bg-\[#3A3A3A\]\/50::after,
+    #stats .bg-\[#3A3A3A\]\/50::after {
+        content: "⟺ Geser untuk melihat lebih banyak";
+        display: block;
+        text-align: center;
+        padding: 8px;
+        font-size: 0.8rem;
         color: var(--gold);
+        background-color: rgba(44, 44, 44, 0.8);
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    /* Hero Section Adjustments */
+    .hero-gradient {
+        padding-top: 40px;
+    }
+    
+    /* Button Adjustments */
+    .flex-col.md\:flex-row {
+        gap: 10px;
+    }
+    
+    .btn-gold, .border-2 {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    
+    /* Card Adjustments */
+    .card-glass {
+        padding: 15px 10px;
+    }
+    
+    /* Spacing Adjustments */
+    section {
+        padding: 30px 0;
+    }
+    
+    .px-4 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Navigation Adjustments */
+    nav .h-16 {
+        height: 3.5rem;
+    }
+    
+    nav .h-10 {
+        height: 2rem;
     }
 }
 
@@ -178,6 +343,99 @@ body {
     transition: 0s;
 }
 
+/* Additional Responsive Styles */
+@media (max-width: 640px) {
+    /* Adjust team cards for better mobile display */
+    .team-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Adjust spacing for better mobile readability */
+    .py-20 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    /* Adjust image sizes */
+    .w-64 {
+        width: 12rem;
+    }
+    
+    /* Improve table readability */
+    table {
+        font-size: 0.85rem;
+    }
+    
+    /* Adjust spacing between sections */
+    .mb-12 {
+        margin-bottom: 2rem;
+    }
+    
+    .mb-8 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1rem !important;
+    }
+    
+    /* Prize pool adjustments for very small devices */
+    .digital-font {
+        padding: 0.5rem !important;
+        max-width: 95% !important;
+    }
+    
+    .digital-font .text-lg {
+        font-size: 1rem !important;
+    }
+    
+    .digital-font .text-xs {
+        font-size: 0.65rem !important;
+    }
+    
+    /* Table Scroll Adjustments for very small devices */
+    #standings .grid-cols-12,
+    #stats .grid-cols-12 {
+        min-width: 600px;
+        grid-template-columns: repeat(12, minmax(50px, 1fr));
+    }
+    
+    #standings .bg-\[#3A3A3A\]\/50::after,
+    #stats .bg-\[#3A3A3A\]\/50::after {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+    
+    /* Further reduce padding */
+    .px-4 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    /* Adjust button text size */
+    .btn-gold, .border-2 {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    
+    /* Smaller images */
+    .w-64 {
+        width: 10rem;
+    }
+    
+    /* Adjust card padding */
+    .card-glass {
+        padding: 10px 8px;
+    }
+}
+
 /* Animation */
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -187,6 +445,17 @@ body {
 
 .float-animation {
     animation: float 3s ease-in-out infinite;
+}
+
+/* Champions Card Styles */
+.card-glass.border-\[\#FFD700\] {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card-glass.border-\[\#FFD700\]:hover {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+    transform: translateY(-5px);
 }
 
 .delay-1 {
