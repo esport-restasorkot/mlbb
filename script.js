@@ -2,7 +2,7 @@
 const standingsData = [
     { rank: 1, team: "BAJIR SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
     { rank: 2, team: "AANSLAG SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
-    { rank: 3, team: ".... SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
+    { rank: 3, team: "BASTARD SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 },
     { rank: 4, team: "VALOR HEXA SQUAD", matches: 0, wins: 0, losses: 0, pts: "0", points: 0 }
 ];
 
@@ -69,7 +69,7 @@ function getTeamImage(teamName) {
     const images = {
         "BAJIR SQUAD": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
         "AANSLAG SQUAD": "https://i.ibb.co/qBRyH5H/gladiator-logo.png",
-        ".... SQUAD": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
+        "BASTARD SQUAD": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
         "VALOR HEXA SQUAD": "https://i.ibb.co/fH2x2pK/titan-logo.png"
     };
     return images[teamName];
