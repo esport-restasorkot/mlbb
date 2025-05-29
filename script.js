@@ -1,9 +1,9 @@
 // JSON Data
 const standingsData = [
-    { rank: 2, team: "AANSLAG SQUAD", matches: 1, wins: 2, losses: 1, pts: "1", points: 2 },
-    { rank: 4, team: "VALOR HEXA SQUAD", matches: 1, wins: 2, losses: 1, pts: "2", points: 2 },
+    { rank: 1, team: "AANSLAG SQUAD", matches: 1, wins: 2, losses: 1, pts: "1", points: 2 },
+    { rank: 2, team: "VALOR HEXA SQUAD", matches: 1, wins: 2, losses: 1, pts: "2", points: 2 },
     { rank: 3, team: "BASTARD SQUAD", matches: 1, wins: 1, losses: 2, pts: "3", points: 1 },
-    { rank: 1, team: "BAJIR SQUAD", matches: 1, wins: 1, losses: 2, pts: "4", points: 1 }
+    { rank: 4, team: "BAJIR SQUAD", matches: 1, wins: 1, losses: 2, pts: "4", points: 1 }
     ];
 
 const topPlayersData = [
