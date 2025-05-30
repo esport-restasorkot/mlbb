@@ -14,26 +14,27 @@ const topPlayersData = [
 ];
 
 const playerStatsData = [
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
-    { player: "Player", team: "SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" }
+    { player: "Asrofi", team: "BAJIR SQUAD", kills: 9, deaths: 25, assists: 24, kda: 0, hero: "HERO" },
+    { player: "sunflowers", team: "BAJIR SQUAD", kills: 7, deaths: 12, assists: 19, kda: 0, hero: "HERO" },
+    { player: "paitua ternate", team: "BAJIR SQUAD", kills: 6, deaths: 17, assists: 17, kda: 0, hero: "HERO" },
+    { player: "Peli Gedi", team: "BAJIR SQUAD", kills: 17, deaths: 13, assists: 17, kda: 0, hero: "HERO" },
+    { player: "jj@44", team: "BAJIR SQUAD", kills: 14, deaths: 7, assists: 17, kda: 0, hero: "HERO" },
+    { player: "davis", team: "AANSLAG SQUAD", kills: 9, deaths: 8, assists: 18, kda: 0, hero: "HERO" },
+    { player: "JTfast", team: "AANSLAG SQUAD", kills: 23, deaths: 17, assists: 33, kda: 0, hero: "HERO" },
+    { player: "VJEST", team: "AANSLAG SQUAD", kills: 5, deaths: 7, assists: 27, kda: 0, hero: "HERO" },
+    { player: "Feurmooninho", team: "AANSLAG SQUAD", kills: 26, deaths: 8, assists: 11, kda: 0, hero: "HERO" },
+    { player: "Yudzz", team: "AANSLAG SQUAD", kills: 11, deaths: 14, assists: 44, kda: 0, hero: "HERO" },
+    { player: "Aveiro", team: "AANSLAG SQUAD", kills: 8, deaths: 1, assists: 13, kda: 0, hero: "HERO" },
+    { player: "FIQRAM CARRY US", team: "BASTARD SQUAD", kills: 36, deaths: 18, assists: 24, kda: 0, hero: "HERO" },
+    { player: "Arkaaa", team: "BASTARD SQUAD", kills: 12, deaths: 11, assists: 45, kda: 0, hero: "HERO" },
+    { player: "TALIBAN07", team: "BASTARD SQUAD", kills: 10, deaths: 20, assists: 22, kda: 0, hero: "HERO" },
+    { player: "El Chapo", team: "BASTARD SQUAD", kills: 13, deaths: 11, assists: 29, kda: 0, hero: "HERO" },
+    { player: "SL4B3R", team: "BASTARD SQUAD", kills: 3, deaths: 20, assists: 40, kda: 0, hero: "HERO" },
+    { player: "zetsu", team: "VALOR HEXA SQUAD", kills: 16, deaths: 14, assists: 45, kda: 0, hero: "HERO" },
+    { player: "Zanzzz", team: "VALOR HEXA SQUAD", kills: 14, deaths: 14, assists: 42, kda: 0, hero: "HERO" },
+    { player: "FIDHEL", team: "VALOR HEXA SQUAD", kills: 20, deaths: 15, assists: 25, kda: 0, hero: "HERO" },
+    { player: "silaban", team: "VALOR HEXA SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "HERO" },
+    { player: "AKAZA", team: "VALOR HEXA SQUAD", kills: 16, deaths: 10, assists: 45, kda: 0, hero: "HERO" }
 ];
 
 // Load Standings Data
